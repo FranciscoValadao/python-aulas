@@ -8,19 +8,27 @@ rodada = 1
 
 while(total_tentativas>0):
     print("tentativa", rodada, "de 3")
-    rodada = rodada+1
     chute_inp = input("digite o seu número:")
     chute = int(chute_inp)
     print('voce digitou:',chute)
-    maior = (chute > numero_secreto)
-    menor = (chute < numero_secreto)
+    if (0 < chute < 100):
+        rodada = rodada + 1
+        maior = (chute > numero_secreto)
+        menor = (chute < numero_secreto)
 
-    if numero_secreto == chute:
-        print ("acertou")
-        break
+        if numero_secreto == chute:
+            print ("acertou")
+            break
+        else:
+            if (maior):
+                print ("achou muito, otário")
+            elif(menor):
+                print("achou pouco, otário")
+        total_tentativas = total_tentativas -1
     else:
-        if (maior):
-            print ("achou muito, otário")
-        elif(menor):
-            print("achou pouco, otário")
-    total_tentativas = total_tentativas -1
+        print("**************************")
+        print("o valor deve ser de 1 a 99")
+        print("**************************")
+print("**************************")
+print("Fim de jogo")
+print("**************************")
