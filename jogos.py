@@ -1,6 +1,7 @@
 import adivinhacao
 import forca
 
+
 def escolhe_jogo():
     print("*********************************")
     print("*******Escolha o seu jogo!*******")
@@ -10,12 +11,13 @@ def escolhe_jogo():
 
     jogo = int(input("Qual jogo? "))
 
-    if(jogo == 1):
+    if jogo == 1:
         print("Jogando forca")
-        adivinhacao.jogar()
-    elif(jogo == 2):
-        print("Jogando adivinhação")
         forca.jogar()
+    elif jogo == 2:
+        print("Jogando adivinhação")
+        adivinhacao.jogar()
 
-if(__name__ == "__main__"):
+
+if __name__ == "__main__":
     escolhe_jogo()
